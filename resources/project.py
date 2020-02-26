@@ -9,7 +9,7 @@ project =  Blueprint('project', 'project')
 
 
 @project.route('/', methods=['POST'])
-
+# @login_required
 def create_project():
 	payload = request.get_json()
 	print("I'm in the right route!")
@@ -33,8 +33,8 @@ def create_project():
 		), 201
 
 # show will display an unactivated sheet, no change in rendering from show to edit. 
-
 @project.route('/', methods=['GET']) #maybe I should have modeled the master sheet?
+# @login_required
 def show_project_list():
 	print(current_user)
 	project_to_dict=[model_to_dict(project) for project in current_user.project] #maybe I need to back ref current_user to tie create and show together
@@ -44,6 +44,33 @@ def show_project_list():
 		status=200
 		), 200
 
+#on doubleclick, activate entire sheet using this route. perhaps onFocus()
+@project.route('/<id>', methods=['PUT'])
+# @login_required
+def update_project(id):
+	payload=request.get_json()
+	project=models.Project.get_by_id(id)
+	if project.user.id == current_user.id:
+		
+		project.title = payload['title'] #if 'title' in payload else None
+		project.start_date = payload['start_date'] if 'start_date' in payload else None
+		project.end_date = payload['end_date']if 'end_date' in payload else None
+		project.status = payload['status']if 'status' in payload else None
+		project.priority = payload['priority']if 'priority' in payload else None
+		project.save()
+		project_dict=model_to_dict(project)
+
+		return jsonify(
+			data=project_dict,
+			message="Successfully updated task!",
+			status=200
+		), 200
+	else:
+		return jsonify(
+		data={'error':'Forbidden'},
+		message=f"actor_id({task.actor.id}) does not match that of the logged in user",
+		status=403
+		), 403
 
 # POST '/project/' -- create project
 # GET '/project/categories' -- get list of the categories
