@@ -69,7 +69,7 @@ def login():
 	except models.DoesNotExist:
 		return jsonify(
 			data={}, 
-			message="email or password is incorrect",
+			message="username or password is incorrect",
 			# is there a way to tell the user exactly which is no good? 
 			status=401
 			), 401		
