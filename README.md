@@ -7,8 +7,9 @@ SPRINTS -->
 		Finish creating and testing Auth in the backend <--Complete
 	2/26:
 		Create and test all routes for CRUDing Projects <-- Complete
-		Build CRUD routes for second Model
+		Next/Build CRUD routes for second Model
 	2/27:
-		CRUD Tasks
-							Routes 
+		Build CRUD routes for remaining Model, begin researching Charts JS, ask questions, test, repeat. Consider pivoting it makes sense.
+							
+							 
 
