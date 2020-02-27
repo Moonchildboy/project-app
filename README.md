@@ -8,8 +8,14 @@ SPRINTS -->
 	2/26:
 		Create and test all routes for CRUDing Projects <-- Complete
 		Next/Build CRUD routes for second Model
+		Build CRUD routes for remaining Model
 	2/27:
-		Build CRUD routes for remaining Model, begin researching Charts JS, ask questions, test, repeat. Consider pivoting it makes sense.
+		Review and refine model relations 
+		Implement appropriate fieldTypes, including args, in models.py
+		Analyze react component heirarchy
+		Get something basic rendering for each component, w/wo data
+		Begin researching Charts JS, ask questions, test, repeat. Consider additional options.
+		 
 							
 							 
 
