@@ -10,6 +10,7 @@ SPRINTS -->
 		Next/Build CRUD routes for second Model
 		Build CRUD routes for remaining Model
 	2/27:
+		Querying the models 
 		Review and refine model relations 
 		Implement appropriate fieldTypes, including args, in models.py
 		Analyze react component heirarchy
