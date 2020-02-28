@@ -15,7 +15,9 @@ SPRINTS -->
 		Implement appropriate fieldTypes, including args, in models.py
 		Analyze react component heirarchy
 		Get something basic rendering for each component, w/wo data
+		Get functional auth going on frontend
 		Begin researching Charts JS, ask questions, test, repeat. Consider additional options.
+
 		 
 							
 							 
