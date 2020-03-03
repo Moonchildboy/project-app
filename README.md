@@ -24,7 +24,8 @@ SPRINTS WK 2
 		Begin researching Charts JS  by EOD, Consider alternative options. Ask questions, test, repeat.		
 		Beging implementing official ui features
 	3/4:
-		Final Debugging 
+		Final Debugging
+		Deploy?
 		Begin including stretch feature in a branch
 	3/5:
 		write a light script
